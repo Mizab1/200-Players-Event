@@ -13,7 +13,7 @@ export const restorePlayer = MCFunction("game/command/restore_last_5_players", (
       MCFunction(
         "game/command/private/match_player_score",
         () => {
-          raw(``);
+          raw(`# Compare and match the global death sequence number and self death sequence number`);
           execute.as("@a").if(selfDeathSequence.equalTo(globalDeathSequence)).run(changeSelfGamemode);
           raw(`# Decrement global death sequence number`);
           globalDeathSequence.remove(1);
