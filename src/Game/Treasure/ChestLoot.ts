@@ -7,8 +7,8 @@ LootTable("treasure/treasure_loot", {
     {
       rolls: {
         type: "minecraft:uniform",
-        min: 1,
-        max: 2,
+        min: 3,
+        max: 6,
       },
       entries: [
         {
@@ -44,8 +44,8 @@ LootTable("treasure/treasure_loot", {
     {
       rolls: {
         type: "minecraft:uniform",
-        min: 0,
-        max: 5,
+        min: 4,
+        max: 8,
       },
       entries: [
         {
@@ -64,47 +64,7 @@ LootTable("treasure/treasure_loot", {
           functions: [
             {
               function: "minecraft:set_potion",
-              id: "minecraft:strength",
-            },
-          ],
-        },
-        {
-          type: "minecraft:item",
-          name: "minecraft:potion",
-          functions: [
-            {
-              function: "minecraft:set_potion",
-              id: "minecraft:water_breathing",
-            },
-          ],
-        },
-        {
-          type: "minecraft:item",
-          name: "minecraft:potion",
-          functions: [
-            {
-              function: "minecraft:set_potion",
-              id: "minecraft:regeneration",
-            },
-          ],
-        },
-        {
-          type: "minecraft:item",
-          name: "minecraft:potion",
-          functions: [
-            {
-              function: "minecraft:set_potion",
               id: "minecraft:healing",
-            },
-          ],
-        },
-        {
-          type: "minecraft:item",
-          name: "minecraft:potion",
-          functions: [
-            {
-              function: "minecraft:set_potion",
-              id: "minecraft:leaping",
             },
           ],
         },
@@ -124,18 +84,14 @@ LootTable("treasure/treasure_loot", {
           functions: [
             {
               function: "minecraft:set_potion",
-              id: "minecraft:strength",
+              id: "minecraft:swiftness",
             },
           ],
         },
       ],
     },
     {
-      rolls: {
-        type: "minecraft:uniform",
-        min: 0,
-        max: 1,
-      },
+      rolls: 1,
       entries: [
         {
           type: "minecraft:item",
@@ -146,7 +102,7 @@ LootTable("treasure/treasure_loot", {
               count: {
                 type: "minecraft:uniform",
                 min: 1,
-                max: 10,
+                max: 8,
               },
             },
           ],
