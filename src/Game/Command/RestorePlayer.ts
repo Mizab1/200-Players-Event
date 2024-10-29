@@ -11,7 +11,7 @@ export const restorePlayer = MCFunction("game/command/restore_last_5_players", (
   for (let i = 0; i < 5; i++) {
     execute.if(globalDeathSequence.greaterOrEqualThan(1)).run(
       MCFunction(
-        "game/command/private/match_player_score",
+        "game/command/restore_command/private/match_player_score",
         () => {
           raw(`# Compare and match the global death sequence number and self death sequence number`);
           execute.as("@a").if(selfDeathSequence.equalTo(globalDeathSequence)).run(changeSelfGamemode);
@@ -26,7 +26,7 @@ export const restorePlayer = MCFunction("game/command/restore_last_5_players", (
   }
 });
 
-const changeSelfGamemode = MCFunction("game/command/private/change_self_gamemode", () => {
+const changeSelfGamemode = MCFunction("game/command/restore_command/private/change_self_gamemode", () => {
   gamemode("survival", self);
   raw(`# Reset death sequence number for this entity`);
   selfDeathSequence.set(-1);
