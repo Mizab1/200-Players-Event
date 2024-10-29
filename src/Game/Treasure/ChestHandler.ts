@@ -26,7 +26,7 @@ const getTreasureMap = MCFunction("game/treasure/get_treasure_map", () => {
     give(
       self,
       i("minecraft:filled_map", {
-        map: 0,
+        map: 1,
         Decorations: [
           {
             x: NBT.double(chestLocation.values[0]),
@@ -43,10 +43,10 @@ const getTreasureMap = MCFunction("game/treasure/get_treasure_map", () => {
 });
 
 // For testing purposes
-MCFunction("game/treasure/spawn_test_loot", () => {
-  setblock(rel(0, 0, 2), 'chest{LootTable:"players_event:treasure/treasure_loot"}');
-});
-MCFunction("game/treasure/empty_test_loot", () => {
-  raw(`loot replace block ~ ~ ~2 container.0 27 loot minecraft:empty`);
-  raw(`setblock ~ ~ ~2 air`);
-});
+// MCFunction("game/treasure/spawn_test_loot", () => {
+//   setblock(rel(0, 0, 2), 'chest{LootTable:"players_event:treasure/treasure_loot"}');
+// });
+// MCFunction("game/treasure/empty_test_loot", () => {
+//   raw(`loot replace block ~ ~ ~2 container.0 27 loot minecraft:empty`);
+//   raw(`setblock ~ ~ ~2 air`);
+// });
