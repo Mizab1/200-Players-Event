@@ -1,6 +1,7 @@
 import { execute, gamerule, MCFunction, raw, Selector, team } from "sandstone";
 import { playerDeathTick } from "./Player/Death/Main";
 import { globalDeathSequence, selfDeathSequence } from "./Game/Command/RestorePlayer";
+import { updatePlayerPos } from "./Player/Position/Main";
 
 export const self = Selector("@s");
 
@@ -8,7 +9,10 @@ export const self = Selector("@s");
 MCFunction(
   "tick",
   () => {
-    playerDeathTick();
+    execute.as("@a").run(() => {
+      execute.at(self).run(updatePlayerPos);
+      playerDeathTick();
+    });
   },
   {
     runEachTick: true,
