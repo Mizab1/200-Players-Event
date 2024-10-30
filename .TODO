@@ -4,6 +4,7 @@
 ☐ Add coords and trigger to restore command
 ☐ Spawn mobs with different rarity
 ☐ Spawn treasure chests
+☐ Set the limit to position update score for each team
 
 - Task completed ✅
 ✔ When player is killed they should enter spectator mode
@@ -11,3 +12,4 @@
 ✔ Turn off Friendly Fire 
 ✔ Add restore command (Make sure to run this command 'scoreboard players set .global death_sequence 0' to make the global score 0)
 ✔ Make treasure loot table
+✔ Add position update score
