@@ -1,15 +1,21 @@
 - Task to be completed 🚧
-☐ Player can only spectate their own team
-☐ When a player crosses the line and enter into other team's territory, kill them
+☐ Set the line coord
+☐ Set the spawnpoint of the players
 ☐ Add coords and trigger to restore command
 ☐ Spawn mobs with different rarity
 ☐ Spawn treasure chests
 ☐ Set the limit to position update score for each team
 
 - Task completed ✅
+✔ Player can only spectate their own team
+✔ When a player crosses the line and enter into other team's territory, kill them
 ✔ When player is killed they should enter spectator mode
 ✔ Create two teams 
 ✔ Turn off Friendly Fire 
 ✔ Add restore command (Make sure to run this command 'scoreboard players set .global death_sequence 0' to make the global score 0)
 ✔ Make treasure loot table
 ✔ Add position update score
+
+
+- Imp Commands
+scoreboard players set do_enforce_rules game_private 1
