@@ -9,10 +9,10 @@ const selfDeathScore = Objective.create("death_score", "deathCount")("@s");
 export const playerDeathTick = MCFunction("player/death/main", () => {
   execute.if(selfDeathScore.matches([1, Infinity])).run("player/death/change_gamemode", () => {
     selfDeathScore.set(0);
-    tellraw(self, [
-      { selector: "@s", color: "gold" },
-      { text: " has been perished", color: "red" },
-    ]);
+    // tellraw(self, [
+    //   { selector: "@s", color: "gold" },
+    //   { text: " has been perished", color: "red" },
+    // ]);
     gamemode("spectator", self);
 
     raw(`# Increment death sequence number for this entity`);
